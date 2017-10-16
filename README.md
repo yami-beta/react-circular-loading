@@ -1,5 +1,7 @@
 # react-circular-loading
 
+[![npm version](https://badge.fury.io/js/%40yami_beta%2Freact-circular-loading.svg)](https://www.npmjs.com/package/@yami_beta/react-circular-loading)
+
 react-circular-loading is React Component for Loading.
 
 ![react-circular-loading demo](https://raw.githubusercontent.com/yami-beta/react-circular-loading/master/demo.gif)
