@@ -55,9 +55,9 @@ render(<App />, document.getElementById('app'));
 
 ```js
 circularLoading({
-  // Distance of dot from center
+  // Distance of dot from center `em`
   distance: 4,
-  // Dot's size (`em`)
+  // Dot's size `em`
   dotSize: 1,
   // Dot's color (base color)
   dotColor0: `rgba(50, 51, 52, 0.1)`,
@@ -67,7 +67,7 @@ circularLoading({
   dotColor2: `rgba(50, 51, 52, 1.0)`,
   // A number of dots
   num: 8,
-  // Animation speed (`ms`)
+  // Animation speed `ms`
   speed: 1000,
 });
 
