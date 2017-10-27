@@ -27,7 +27,7 @@ Import and generate `CircularLoading` component by `circularLoading()`.
 ```js
 import React from 'react';
 import { render } from 'react-dom';
-import { circularLoading }  from '../lib/index';
+import { circularLoading }  from '@yami_beta/react-circular-loading';
 
 const CircularLoading = circularLoading({
   num: 12,
