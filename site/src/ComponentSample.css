@@ -1,0 +1,31 @@
+.component-sample .cl-samples {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.component-sample .cl-samples__item {
+  box-sizing: border-box;
+  width: 90%;
+  padding: 10px 20px;
+}
+.component-sample .cl-samples__item-content {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.component-sample .cl-samples__component {
+  box-sizing: border-box;
+  padding: 10px;
+}
+.component-sample .cl-samples__code {
+  box-sizing: border-box;
+  padding: 10px;
+  flex: 1;
+}
+.component-sample .cl-samples__code pre {
+  width: 100%;
+}
