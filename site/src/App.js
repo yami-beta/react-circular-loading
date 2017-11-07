@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import Content from './Content';
 import './App.css';
-import ComponentSample from './ComponentSample';
-import Installation from './Installation';
 
 class App extends Component {
   render() {
@@ -10,8 +9,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">React Circular Loading</h1>
         </header>
-        <ComponentSample></ComponentSample>
-        <Installation></Installation>
+        <Content></Content>
       </div>
     );
   }
