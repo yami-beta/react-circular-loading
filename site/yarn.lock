@@ -3,8 +3,8 @@
 
 
 "@yami_beta/react-circular-loading@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@yami_beta/react-circular-loading/-/react-circular-loading-0.1.0.tgz#bdd4b09104aa81b34eb5eca4dc02bfb3b06eedbb"
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@yami_beta/react-circular-loading/-/react-circular-loading-0.1.1.tgz#53433ebef7c87291cd7f7a03f05f75fb8c495385"
   dependencies:
     styled-components "^2.2.1"
 

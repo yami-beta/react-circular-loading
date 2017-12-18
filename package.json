@@ -12,11 +12,12 @@
     "url": "https://github.com/yami-beta/react-circular-loading.git"
   },
   "scripts": {
+    "clean": "rm -rf ./lib/",
     "build:js": "babel src -d lib --ignore src/*.test.js",
     "watch:js": "babel -w src -d lib --ignore src/*.test.js",
     "build": "npm-run-all -p build:*",
     "watch": "npm-run-all -p watch:*",
-    "version": "npm run build && git add --all",
+    "version": "npm run clean && npm run build && git add --all",
     "prettier": "prettier --write 'src/**/*.js'",
     "test": "jest"
   },
