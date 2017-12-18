@@ -1,1 +1,1 @@
-export { circularLoading } from "./CircularLoading";
+export { circularLoading } from "./circularLoading";
