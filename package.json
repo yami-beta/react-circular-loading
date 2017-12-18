@@ -12,20 +12,30 @@
     "url": "https://github.com/yami-beta/react-circular-loading.git"
   },
   "scripts": {
-    "build:js": "babel src -d lib",
-    "watch:js": "babel -w src -d lib",
+    "build:js": "babel src -d lib --ignore src/*.test.js",
+    "watch:js": "babel -w src -d lib --ignore src/*.test.js",
     "build": "npm-run-all -p build:*",
     "watch": "npm-run-all -p watch:*",
     "version": "npm run build && git add --all",
-    "prettier": "prettier --write 'src/**/*.js'"
+    "prettier": "prettier --write 'src/**/*.js'",
+    "test": "jest"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "<rootDir>/enzyme.setup.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "^21.2.1",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.9.2",
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
   },
   "peerDependencies": {
     "react": "^16.0.0"

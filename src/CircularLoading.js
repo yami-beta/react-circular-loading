@@ -36,7 +36,7 @@ const getDotsAnimation = (dots, options) => {
     .join("\n")}`;
 };
 
-const getCircleLoadingDots = options => {
+const calcDots = options => {
   let dots = [];
   for (let i = 0; i < options.num; i++) {
     const percentage = 100 * i / options.num;
@@ -57,22 +57,25 @@ const getCircleLoadingDots = options => {
     });
   }
 
-  const dotsAnimation = getDotsAnimation(dots, options);
+  return dots;
+};
 
-  return styled.span`
-    position: relative;
-    display: inline-block;
-    vertical-align: middle;
-    width: ${options.dotSize}em;
-    height: ${options.dotSize}em;
-    border-radius: 50%;
-    margin: ${options.distance}em;
-    box-shadow: ${dots
+const CircularLoadingDots = styled.span`
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: ${props => props.dotSize}em;
+  height: ${props => props.dotSize}em;
+  border-radius: 50%;
+  margin: ${props => props.distance}em;
+  box-shadow: ${props =>
+    props.dots
       .map(dot => `${dot.x}em ${dot.y}em ${dot.blur}em ${dot.color}`)
       .join(",")};
-    animation: ${dotsAnimation} ${options.speed}ms infinite linear;
-  `;
-};
+  animation: ${props => props.dotsAnimation} ${props => props.speed}ms infinite
+    linear;
+`;
+CircularLoadingDots.displayName = "CircularLoadingDots";
 
 const circularLoading = params => {
   const options = Object.assign(
@@ -88,12 +91,17 @@ const circularLoading = params => {
     },
     params
   );
+  const dots = calcDots(options);
+  const dotsAnimation = getDotsAnimation(dots, options);
 
   return props => {
-    const CircularLoadingDots = getCircleLoadingDots(options);
     return (
       <CircularLoadingRoot>
-        <CircularLoadingDots />
+        <CircularLoadingDots
+          {...options}
+          dots={dots}
+          dotsAnimation={dotsAnimation}
+        />
       </CircularLoadingRoot>
     );
   };
