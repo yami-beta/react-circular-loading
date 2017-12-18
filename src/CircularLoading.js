@@ -1,5 +1,5 @@
-import React from 'react';
-import styled, { keyframes } from 'styled-components';
+import React from "react";
+import styled, { keyframes } from "styled-components";
 
 const CircularLoadingRoot = styled.div`
   display: inline-block;
@@ -9,30 +9,34 @@ const getDotsAnimation = (dots, options) => {
   let animations = [];
   for (let i = 0; i < options.num; i++) {
     const percentage = 100 * i / options.num;
-    const shadow = dots.map((dot, j) => {
-      let color = options.dotColor0;
-      if (i === j) {
-        color = options.dotColor2;
-      } else if (i === j - 1 || i === j + 1) {
-        color = options.dotColor1;
-      }
-      return `${dot.x}em ${dot.y}em ${dot.blur}em ${color}`;
-    }).join(',');
+    const shadow = dots
+      .map((dot, j) => {
+        let color = options.dotColor0;
+        if (i === j) {
+          color = options.dotColor2;
+        } else if (i === j - 1 || i === j + 1) {
+          color = options.dotColor1;
+        }
+        return `${dot.x}em ${dot.y}em ${dot.blur}em ${color}`;
+      })
+      .join(",");
 
     animations.push({
       percentage,
-      boxShadow: shadow,
+      boxShadow: shadow
     });
   }
   animations.push({
     percentage: 100,
-    boxShadow: animations[0].boxShadow,
+    boxShadow: animations[0].boxShadow
   });
 
-  return keyframes`${animations.map((a) => `${a.percentage}% { box-shadow: ${a.boxShadow}; }`).join('\n')}`
+  return keyframes`${animations
+    .map(a => `${a.percentage}% { box-shadow: ${a.boxShadow}; }`)
+    .join("\n")}`;
 };
 
-const getCircleLoadingDots = (options) => {
+const getCircleLoadingDots = options => {
   let dots = [];
   for (let i = 0; i < options.num; i++) {
     const percentage = 100 * i / options.num;
@@ -49,7 +53,7 @@ const getCircleLoadingDots = (options) => {
       x: (options.distance * Math.cos(rad)).toFixed(2),
       y: (options.distance * Math.sin(rad)).toFixed(2),
       blur: 0,
-      color: color,
+      color: color
     });
   }
 
@@ -60,26 +64,32 @@ const getCircleLoadingDots = (options) => {
     display: inline-block;
     vertical-align: middle;
     width: ${options.dotSize}em;
-    height:${options.dotSize}em;
+    height: ${options.dotSize}em;
     border-radius: 50%;
     margin: ${options.distance}em;
-    box-shadow: ${dots.map((dot) => `${dot.x}em ${dot.y}em ${dot.blur}em ${dot.color}`).join(',')};
+    box-shadow: ${dots
+      .map(dot => `${dot.x}em ${dot.y}em ${dot.blur}em ${dot.color}`)
+      .join(",")};
     animation: ${dotsAnimation} ${options.speed}ms infinite linear;
   `;
 };
 
-const circularLoading = (params) => {
-  const options = Object.assign({}, {
-    distance: 4,
-    num: 8,
-    dotSize: 1,
-    dotColor0: `rgba(50, 51, 52, 0.1)`,
-    dotColor1: `rgba(50, 51, 52, 0.2)`,
-    dotColor2: `rgba(50, 51, 52, 1.0)`,
-    speed: 1000,
-  }, params);
+const circularLoading = params => {
+  const options = Object.assign(
+    {},
+    {
+      distance: 4,
+      num: 8,
+      dotSize: 1,
+      dotColor0: `rgba(50, 51, 52, 0.1)`,
+      dotColor1: `rgba(50, 51, 52, 0.2)`,
+      dotColor2: `rgba(50, 51, 52, 1.0)`,
+      speed: 1000
+    },
+    params
+  );
 
-  return (props) => {
+  return props => {
     const CircularLoadingDots = getCircleLoadingDots(options);
     return (
       <CircularLoadingRoot>
@@ -87,6 +97,6 @@ const circularLoading = (params) => {
       </CircularLoadingRoot>
     );
   };
-}
+};
 
 export { circularLoading };

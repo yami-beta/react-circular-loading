@@ -16,13 +16,15 @@
     "watch:js": "babel -w src -d lib",
     "build": "npm-run-all -p build:*",
     "watch": "npm-run-all -p watch:*",
-    "version": "npm run build && git add --all"
+    "version": "npm run build && git add --all",
+    "prettier": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "npm-run-all": "^4.1.1",
+    "prettier": "^1.9.2",
     "react": "^16.0.0"
   },
   "peerDependencies": {
