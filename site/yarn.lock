@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@yami_beta/react-circular-loading@^0.1.0":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@yami_beta/react-circular-loading/-/react-circular-loading-0.1.2.tgz#18f25c9d1c901f0669d404c707398d7b633d1d86"
+"@yami_beta/react-circular-loading@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@yami_beta/react-circular-loading/-/react-circular-loading-1.0.0.tgz#2a71b464d28a7b716fda336075909378f7c81638"
   dependencies:
     styled-components "^2.2.1"
 
