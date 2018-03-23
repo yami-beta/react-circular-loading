@@ -11,13 +11,13 @@ react-circular-loading is React Component for Loading.
 ### Step 1
 
 ```sh
-$ npm install @yami_beta/react-circular-loading
+$ npm install styled-components @yami_beta/react-circular-loading
 ```
 
 or
 
 ```sh
-$ yarn add @yami_beta/react-circular-loading
+$ yarn add styled-components @yami_beta/react-circular-loading
 ```
 
 ### Step 2
