@@ -1,6 +1,6 @@
 import React from 'react';
 import SyntaxHighlight from './SyntaxHighlight';
-import { circularLoading } from '@yami_beta/react-circular-loading';
+import { circularLoading } from '@yami-beta/react-circular-loading';
 import './ComponentSample.css';
 
 const CircularLoading = circularLoading();

@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@yami_beta/react-circular-loading@^2.0.0":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@yami_beta/react-circular-loading/-/react-circular-loading-2.0.0.tgz#2b670f3f553d947110500d22c64050f7b7ae3a33"
+"@yami-beta/react-circular-loading@^3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@yami-beta/react-circular-loading/-/react-circular-loading-3.0.0.tgz#53a6e547e1f540f9d9532ca23b607ce2d723e182"
 
 abab@^1.0.3:
   version "1.0.4"
