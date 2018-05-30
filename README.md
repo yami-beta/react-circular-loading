@@ -1,6 +1,6 @@
 # react-circular-loading
 
-[![npm version](https://badge.fury.io/js/%40yami_beta%2Freact-circular-loading.svg)](https://www.npmjs.com/package/@yami_beta/react-circular-loading)
+[![npm version](https://badge.fury.io/js/%40yami-beta%2Freact-circular-loading.svg)](https://www.npmjs.com/package/@yami-beta/react-circular-loading)
 
 react-circular-loading is React Component for Loading.
 
@@ -11,13 +11,13 @@ react-circular-loading is React Component for Loading.
 ### Step 1
 
 ```sh
-$ npm install styled-components @yami_beta/react-circular-loading
+$ npm install styled-components @yami-beta/react-circular-loading
 ```
 
 or
 
 ```sh
-$ yarn add styled-components @yami_beta/react-circular-loading
+$ yarn add styled-components @yami-beta/react-circular-loading
 ```
 
 ### Step 2
@@ -27,7 +27,7 @@ Import and generate `CircularLoading` component by `circularLoading()`.
 ```js
 import React from 'react';
 import { render } from 'react-dom';
-import { circularLoading }  from '@yami_beta/react-circular-loading';
+import { circularLoading }  from '@yami-beta/react-circular-loading';
 
 const CircularLoading = circularLoading({
   num: 12,
